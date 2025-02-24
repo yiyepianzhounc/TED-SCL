@@ -9,30 +9,28 @@ TE-Dataset(Toxic Euphemism Dataset)
 初始的种子关键词包括六个话题： “种族” (Race), “色情” (Sexism), “日常” (General), “性别” (Gender), “性少数群体” (LGBT), and “地区” (Region)。
 
 2、数据集的示例数据：
-数据集字段的基本情况说明：
-字段1：
-字段2：
-字段3：
-字段4：
-字段5：
-字段6：
 TE-Dataset中有害委婉语评论的平均长度和最小长度分别为33.7和3.33，​TE-Dataset中PTET的总数为424。
-1）
-英文对照：
-2）
-英文对照：
-3）
-英文对照：
-4）
-英文对照：
-5）
-英文对照：
+数据集字段的基本情况说明：topic,content,toxic,length,euphemism
+字段1：topic （该评论的话题类型是什么？）
+字段2：content （该评论的内容是什么？）
+字段3：toxic （该评论是有害委婉语吗？）
+字段4：length （该评论的句子长度）
+字段5：euphemism （该评论包含的有害委婉术语是什么？）
 
-
+| topic | content | toxic | length | euphemism |
+|-------|---------|-------|--------|-----------|
+| sexism | 金针菇都没你细！（Enoki mushrooms are not as thin as yours!） | 1 | 8 | 金针菇 |
+| gender | 你把舔狗龟男放到这个行列里可还行，自娱自乐真好玩。（Well, you put the turtle licking guy in that category, and it's fun to amuse yourself.） | 1 | 25 | 龟男 |
+| lgbt | 这个鸡佬，喜欢精神胜利，是一个辣鸡，真是笑死人!（This chick, who likes spiritual victory, is a spicy chicken, which is hilarious!） | 1 | 23 | 鸡佬 |
 
 3、如何使用该数据集？
+1）数据集下载：
+2）数据集导入：
+3）数据集统计：
+
 
 4、给出该数据集支持的论文发表情况：（建议在使用该数据集的时候引用以下论文）
+article：A Toxic Euphemism Detection Framework for Online Social Network Based on Semantic Contrastive Learning and Dual Channel Knowledge Augmentation
 
 5、联系方式（可长期使用的邮箱）：
 whzh.nc@scu.edu.cn
