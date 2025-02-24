@@ -13,11 +13,11 @@ TE-Dataset中有害委婉语评论的平均长度和最小长度分别为33.7和
 数据集字段的基本情况说明：topic,content,toxic,length,euphemism
 | Dataset fields | summarize | 
 |-------|---------|
-| topic(话题类型) | 该评论的话题类型是什么 |
-| content(评论内容) | 该评论的内容是什么 |
+| topic(话题类型) | 该评论的话题类型 |
+| content(评论内容) | 该评论的内容 |
 | toxic(有害标签) | 该评论是否为有害委婉语 | 
 | length(句子长度) | 该评论的句子长度 | 
-| euphemism(委婉术语) | 该评论包含的有害委婉术语是什么？|
+| euphemism(委婉术语) | 该评论包含的有害委婉术语|
 
 | topic | content | toxic | length | euphemism |
 |-------|---------|-------|--------|-----------|
@@ -26,10 +26,31 @@ TE-Dataset中有害委婉语评论的平均长度和最小长度分别为33.7和
 | lgbt | 这个鸡佬，喜欢精神胜利，是一个辣鸡，真是笑死人!（This chick, who likes spiritual victory, is a spicy chicken, which is hilarious!） | 1 | 23 | 鸡佬 |
 
 3、如何使用该数据集？
-1）数据集下载：
-2）数据集导入：
-3）数据集统计：
+1) 数据集下载
+>>>方法 1：直接下载单个文件
+----访问仓库主页
+----确保你访问的是 GitHub 仓库的主页面（例如 https://github.com/yiyepianzhounc/TED-SCL，而非编辑页面的链接）。
+----找到数据集文件点击下载
+注意：数据集以.csv文件形式存在，编码方式为utf-8。
+----找点击文件名称进入文件详情页，点击右上角的 Download（或 Raw）按钮直接下载。
+   
+>>>方法 2：下载整个仓库（推荐）
+----安装 Git。
+----git clone https://github.com/yiyepianzhounc/TED-SCL.git
 
+2) 数据集导入
+导入方式取决于数据格式和目标工具（如 Python、Excel 等）。以下是常见格式的示例：
+
+CSV文件形式
+Python (Pandas)：
+    import pandas as pd
+    df = pd.read_csv("path/to/dataset.csv")
+    Excel：
+    直接双击文件打开，或通过 数据 > 从文本/CSV 导入。
+
+3) 数据集使用
+   train.csv用于模型训练，eval.csv用于模型评估，test.csv用于模型测试
+   注意：请读取完训练集、测试集或验证集后，再读取eu-pairs中有害委婉语与有害含义目标词的映射字典，然后拼接到原来读取到的dataframel，再进行进一步的数据操作。
 
 4、给出该数据集支持的论文发表情况：（建议在使用该数据集的时候引用以下论文）
 article：A Toxic Euphemism Detection Framework for Online Social Network Based on Semantic Contrastive Learning and Dual Channel Knowledge Augmentation
