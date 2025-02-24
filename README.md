@@ -11,11 +11,13 @@ TE-Dataset(Toxic Euphemism Dataset)
 2、数据集的示例数据：
 TE-Dataset中有害委婉语评论的平均长度和最小长度分别为33.7和3.33，​TE-Dataset中PTET的总数为424。
 数据集字段的基本情况说明：topic,content,toxic,length,euphemism
-字段1：topic （该评论的话题类型是什么？）
-字段2：content （该评论的内容是什么？）
-字段3：toxic （该评论是有害委婉语吗？）
-字段4：length （该评论的句子长度）
-字段5：euphemism （该评论包含的有害委婉术语是什么？）
+| Dataset fields | summarize | 
+|-------|---------|
+| topic(话题类型) | 该评论的话题类型是什么 |
+| content(评论内容) | 该评论的内容是什么 |
+| toxic(有害标签) | 该评论是否为有害委婉语 | 
+| length(句子长度) | 该评论的句子长度 | 
+| euphemism(委婉术语) | 该评论包含的有害委婉术语是什么？|
 
 | topic | content | toxic | length | euphemism |
 |-------|---------|-------|--------|-----------|
