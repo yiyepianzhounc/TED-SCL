@@ -57,7 +57,7 @@
 - eval.csv: for evaluating
 - test.csv: for testing
 - eu-pairs: Annotated dictionary of toxic euphemism terms
-- Note：Please read the training, test, or validation datasets first, then load the mapping dictionary of harmful euphemisms and their corresponding harmful meaning target words from the eu-pairs. After that, concatenate the dictionary to the previously loaded dataframe and proceed with further data operations.
+- Please read the train.csv, eval.csv, and test.csv firstly, then load the Annotated dictionary of toxic euphemism terms (eu-pairs.csv) and map toxic euphemism terms to their corresponding toxic meaning wordstarget.
 
 ## Citation：
 article：A Toxic Euphemism Detection Framework for Online Social Network Based on Semantic Contrastive Learning and Dual Channel Knowledge Augmentation
