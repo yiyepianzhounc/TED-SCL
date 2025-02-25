@@ -8,7 +8,7 @@
 - The popularity of the videos was assessed using metrics such as views, likes, donations, comments, and shares.
 - The initial seed keywords covered six topics: "Race"(“种族”), "Sexism"(“色情”), "General"(“日常”), "Gender"(“性别”), "LGBT"(“性少数群体”), and "Region"(“地区”).
 
-- The details of the TE-dataset fields:
+- The field details of the TE-dataset:
 
 | Dataset fields | Description | 
 |-------|---------|
@@ -18,7 +18,7 @@
 | length (句子长度) | The comment length | 
 | euphemism (有害委婉术语) | The toxic euphemism term in the comment |
 
-- The samples of TE-dataset:
+- Some samples of the TE-dataset:
 
 | topic | content | toxic | length | euphemism |
 |-------|---------|-------|--------|-----------|
@@ -27,7 +27,7 @@
 | lgbt | 这个鸡佬，喜欢精神胜利，是一个辣鸡，真是笑死人!（This Ji Lao, who likes spiritual victory, is a spicy chicken, which is hilarious!） | 1 | 23 | 鸡佬(Ji Lao) |
 
 
-- Summary of the TE-dataset：
+- The Summary of the TE-dataset：
 
 | **Topics** | **PTE Terms Number** | **Tox.** | **N-Tox.** | **Total Number** | **Average Length** | **Minimum Length** |
 |--------|------------|--------|------------|--------------|----------------|--------------|
