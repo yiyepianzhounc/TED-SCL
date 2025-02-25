@@ -40,25 +40,24 @@
 | **Total** | 424 | 10,568 | 8,403    | 18,971     | 33.7 | 3.33  |
 
 ## USE
-- 数据集下载
-> 方法 1：直接下载单个文件
-- 访问仓库主页（https://github.com/yiyepianzhounc/TED-SCL）
-- 找到数据集文件点击下载 （数据集以.csv文件形式存在，编码方式为utf-8）
-- 找点击文件名称进入文件详情页，点击右上角的 Download（或 Raw）按钮直接下载
-   
-> 方法 2：下载整个仓库（推荐）- 需要安装 Git。
+- dataset download
+> Method 1：download files directly
+- access the Link（https://github.com/yiyepianzhounc/TED-SCL）
+- click "Raw" and download （The type of files is ".csv"，and the encoding type is "utf-8"）
+
+> Method 2：download by "Git" command
 
 - git clone https://github.com/yiyepianzhounc/TED-SCL.git
-- 数据集导入
-导入方式取决于数据格式和目标工具（如 Python、Excel 等）。以下是常见格式的示例：
 
 ```python
     import pandas as pd
     df = pd.read_csv("path/to/dataset.csv")
 ```
-- 数据集使用
-   train.csv用于模型训练，eval.csv用于模型评估，test.csv用于模型测试
-   注意：请读取完训练集、测试集或验证集后，再读取eu-pairs中有害委婉语与有害含义目标词的映射字典，然后拼接到原来读取到的dataframel，再进行进一步的数据操作。
+- train.csv: for training
+- eval.csv: for evaluating
+- test.csv: for testing
+- eu-pairs: Annotated dictionary of toxic euphemism terms
+- Note：Please read the training, test, or validation datasets first, then load the mapping dictionary of harmful euphemisms and their corresponding harmful meaning target words from the eu-pairs. After that, concatenate the dictionary to the previously loaded dataframe and proceed with further data operations.
 
 ## Citation：
 article：A Toxic Euphemism Detection Framework for Online Social Network Based on Semantic Contrastive Learning and Dual Channel Knowledge Augmentation
@@ -74,12 +73,12 @@ E-mail：1207848988@qq.com
 
 ## Explanations and Issues
 
-- 为避免隐私泄露，本数据集在发布前已经进行了以下处理：
-- 对特殊词汇进行了删除或匿名化；
-- 屏蔽了能够定位识别个人身份的PII信息（包括：社交网络平台中的ID或昵称信息）
-- 本数据集的发布仅用于研究用途，请勿用于其他不当用途；
-- 在使用该数据集时，请读者签订《Authorization for Use of the Dataset》
+To prevent privacy leakage, the following processing steps have been applied to this dataset before release:
 
+- Special entity have been deleted or anonymized;
+- Personally Identifiable Information (PII) that could be used to identify individuals (including IDs or nicknames on social media platforms) has been masked;
+- The release of this dataset is for research purposes only and should not be used for any inappropriate applications;
+- Please sign the "Authorization for Use of the Dataset."
 
 ## 数据集详细信息 （Chinese Version）
 
