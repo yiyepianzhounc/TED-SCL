@@ -22,9 +22,9 @@
 
 | topic | content | toxic | length | euphemism |
 |-------|---------|-------|--------|-----------|
-| sexism | 金针菇都没你细！（Enoki mushrooms are not as thin as yours!） | 1 | 8 | 金针菇（Needle mushroom） |
-| gender | 你把舔狗龟男放到这个行列里可还行，自娱自乐真好玩。（Well, you put the turtle licking guy in that category, and it's fun to amuse yourself.） | 1 | 25 | 龟男(Gui Nan) |
-| lgbt | 这个鸡佬，喜欢精神胜利，是一个辣鸡，真是笑死人!（This chick, who likes spiritual victory, is a spicy chicken, which is hilarious!） | 1 | 23 | 鸡佬(Ji Lao) |
+| sexism | 金针菇都没你细！（Enoki mushrooms are not as thin as yours!） | 1 | 8 | 金针菇（Enoki mushrooms） |
+| gender | 你把舔狗龟男放到这个行列里可还行，自娱自乐真好玩。（Well, you put the Gui Nan in that category, and it's fun to amuse yourself.） | 1 | 25 | 龟男(Gui Nan) |
+| lgbt | 这个鸡佬，喜欢精神胜利，是一个辣鸡，真是笑死人!（This Ji Lao, who likes spiritual victory, is a spicy chicken, which is hilarious!） | 1 | 23 | 鸡佬(Ji Lao) |
 
 
 - Summary of the TE-dataset：
