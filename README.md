@@ -47,7 +47,9 @@
 
 > Method 2：download by "Git" command
 
+```python
 - git clone https://github.com/yiyepianzhounc/TED-SCL.git
+```
 
 ```python
     import pandas as pd
