@@ -1,5 +1,5 @@
 # TE-Dataset：Toxic Euphemism Dataset
-## Dataset Details （Chinese）
+## 数据集详细信息 （Chinese Version）
 
 ## 数据集如何采集的？如何标注的？
 - 为了解决缺乏标准有害委婉语数据集的问题，我们选择了哔哩哔哩作为目标平台，因为该网站上有害委婉语的传播迅速且广泛。​
