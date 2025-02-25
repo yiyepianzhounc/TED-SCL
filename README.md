@@ -19,6 +19,7 @@ TE-Dataset(Toxic Euphemism Dataset)
 | euphemism(委婉术语) | 该评论包含的有害委婉术语|
 
 - 数据集的示例数据：
+
 | topic | content | toxic | length | euphemism |
 |-------|---------|-------|--------|-----------|
 | sexism | 金针菇都没你细！（Enoki mushrooms are not as thin as yours!） | 1 | 8 | 金针菇 |
@@ -27,6 +28,7 @@ TE-Dataset(Toxic Euphemism Dataset)
 
 
 - 数据集的详细信息统计：
+
 | Dataset    | Category  |  User  |  Tweet   | Picture |
 | ---------- | --------- | :----: | :------: | :-----: |
 | Candidates | Depressed | 125479 | 5478806  | 2354701 |
