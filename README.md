@@ -22,9 +22,9 @@ TE-Dataset(Toxic Euphemism Dataset)
 
 | topic | content | toxic | length | euphemism |
 |-------|---------|-------|--------|-----------|
-| sexism | 金针菇都没你细！（Enoki mushrooms are not as thin as yours!） | 1 | 8 | 金针菇 |
-| gender | 你把舔狗龟男放到这个行列里可还行，自娱自乐真好玩。（Well, you put the turtle licking guy in that category, and it's fun to amuse yourself.） | 1 | 25 | 龟男 |
-| lgbt | 这个鸡佬，喜欢精神胜利，是一个辣鸡，真是笑死人!（This chick, who likes spiritual victory, is a spicy chicken, which is hilarious!） | 1 | 23 | 鸡佬 |
+| sexism | 金针菇都没你细！（Enoki mushrooms are not as thin as yours!） | 1 | 8 | 金针菇（Needle mushroom） |
+| gender | 你把舔狗龟男放到这个行列里可还行，自娱自乐真好玩。（Well, you put the turtle licking guy in that category, and it's fun to amuse yourself.） | 1 | 25 | 龟男(Gui Nan) |
+| lgbt | 这个鸡佬，喜欢精神胜利，是一个辣鸡，真是笑死人!（This chick, who likes spiritual victory, is a spicy chicken, which is hilarious!） | 1 | 23 | 鸡佬(Ji Lao) |
 
 
 - 数据集的详细信息统计：
@@ -44,37 +44,42 @@ TE-Dataset中有害委婉语评论的平均长度和最小长度分别为33.7和
 ## 如何使用该数据集？
 - 数据集下载
 > 方法 1：直接下载单个文件
-----访问仓库主页
-----确保你访问的是 GitHub 仓库的主页面（例如 https://github.com/yiyepianzhounc/TED-SCL，而非编辑页面的链接）。
-----找到数据集文件点击下载
-注意：数据集以.csv文件形式存在，编码方式为utf-8。
-----找点击文件名称进入文件详情页，点击右上角的 Download（或 Raw）按钮直接下载。
+-访问仓库主页
+-确保你访问的是 GitHub 仓库的主页面（例如 https://github.com/yiyepianzhounc/TED-SCL，而非编辑页面的链接）。
+-找到数据集文件点击下载     注意：数据集以.csv文件形式存在，编码方式为utf-8。
+-找点击文件名称进入文件详情页，点击右上角的 Download（或 Raw）按钮直接下载。
    
-> 方法 2：下载整个仓库（推荐）
-----安装 Git。
-----git clone https://github.com/yiyepianzhounc/TED-SCL.git
+> 方法 2：下载整个仓库（推荐）- 需要安装 Git。
 
+- git clone https://github.com/yiyepianzhounc/TED-SCL.git
 - 数据集导入
-
 导入方式取决于数据格式和目标工具（如 Python、Excel 等）。以下是常见格式的示例：
 
 ```python
     import pandas as pd
     df = pd.read_csv("path/to/dataset.csv")
 ```
-
 - 数据集使用
    train.csv用于模型训练，eval.csv用于模型评估，test.csv用于模型测试
    注意：请读取完训练集、测试集或验证集后，再读取eu-pairs中有害委婉语与有害含义目标词的映射字典，然后拼接到原来读取到的dataframel，再进行进一步的数据操作。
 
-## 该数据集支持的论文发表情况：（建议在使用该数据集的时候引用以下论文）
+## 该数据集支持的论文发表情况：
 article：A Toxic Euphemism Detection Framework for Online Social Network Based on Semantic Contrastive Learning and Dual Channel Knowledge Augmentation
 
-## 联系方式（可长期使用的邮箱）：
-whzh.nc@scu.edu.cn
+## 联系方式：
+- Corresponding author
+Professor Haizhou Wang：
+E-mail：whzh.nc@scu.edu.cn
 
-## 为了避免隐私泄露，包括能够定位识别个人身份的PII信息（比如：社交网络平台中的ID或昵称信息），在数据集发布前已经进行了删除或匿名化；
+- First Author
+Gang Zhou
+E-mail：1207848988@qq.com
 
-## 本数据集的发布在理论上不存在其他安全风险或伦理问题，但是该数据集仅用于研究用途；
+## 为避免隐私泄露，本数据集在发布前已经进行了以下处理：
+- 对特殊词汇进行了删除或匿名化；
+- 屏蔽了能够定位识别个人身份的PII信息（包括：社交网络平台中的ID或昵称信息）
+- 
+## 本数据集的发布仅用于研究用途，请勿用于其他不当用途；
 
-## 在使用该数据集时，请读者签订《Authorization for Use of the Dataset》，严格确保不用于商业用途或其他风险。
+## 在使用该数据集时，请读者注意以下事项：
+- 签订《Authorization for Use of the Dataset》，严格确保不用于商业用途或其他风险。
