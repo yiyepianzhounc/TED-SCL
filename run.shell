@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+set -euo pipefail
+source ./config.sh
+
+echo "=== Batch run with averaging start: $(date) ==="
+
+for model in "${MODELS[@]}"; do
+  echo ""
+  echo "======== 模型: ${model} ========"
+
+  acc_sum=0
+  f1_sum=0
+  acc_arr=()
+  f1_arr=()
+
+  for ((i=0;i<REPEAT;i++)); do
+    seed=${SEEDS[i]:-${SEEDS[-1]}}
+    echo "--> Round $((i+1))/${REPEAT}, seed=${seed}"
+
+    output=$(python main.py \
+      --encoding_model_name "${model}" \
+      --device_name "${DEVICE}" \
+      --batch_size "${BATCH_SIZE}" \
+      --learning_rate "${LR}" \
+      --max_sequence_length "${MAX_SEQ_LEN}" \
+      --max_epoch "${MAX_EPOCH}" \
+      --eval_epochs "${EVAL_EPOCHS}" \
+      --early_stop_epochs "${EARLY_STOP}" \
+      --pooling_type "${POOL_TYPE}" \
+      --n_class "${N_CLASS}" \
+      --random_seed "${seed}" \
+      --model_mode "${MODE}" \
+      --log "${LOG}" \
+      2>&1)
+
+    acc=$(echo "$output" | grep -i "Test Accuracy" | tail -1 | awk '{print $NF}')
+    f1=$(echo "$output" | grep -i "Test F1" | tail -1 | awk '{print $NF}')
+
+    acc=${acc:-0}
+    f1=${f1:-0}
+
+    acc_sum=$(echo "$acc_sum + $acc" | bc)
+    f1_sum=$(echo "$f1_sum + $f1" | bc)
+    acc_arr+=($acc)
+    f1_arr+=($f1)
+
+    echo "Result: ACC=$acc, F1=$f1"
+  done
+
+  avg_acc=$(echo "scale=4; $acc_sum / $REPEAT" | bc)
+  avg_f1=$(echo "scale=4; $f1_sum / $REPEAT" | bc)
+
+  echo ""
+  echo ">>> 模型 ${model} 的 ${REPEAT} 次平均结果："
+  echo "    ACC 平均值: $avg_acc"
+  echo "    F1 平均值 : $avg_f1"
+done
+
+echo ""
+echo "=== All finished: $(date) ==="
