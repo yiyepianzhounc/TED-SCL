@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-# config.sh ——————————————————————————————————————————————————————
-# 列出要跑的模型名称（与 main.py 中 --encoding_model_name 对应）
+# config.sh — 更新版，用于配合 run.sh
+
+# —— 模型列表 —— 
+# 与 main.py 中 --encoding_model_name 参数对应
 MODELS=(
   "bert-base"
   "bert-large"
@@ -11,22 +13,22 @@ MODELS=(
   "consert-large"
 )
 
-# 公共参数
-DEVICE="cuda:0"
-BATCH_SIZE=64
-LR=1e-3
-MAX_SEQ_LEN=96
-MAX_EPOCH=100
-EVAL_EPOCHS=1
-EARLY_STOP=20
-POOL_TYPE="none"
-N_CLASS=2
-LOG="no"
+# —— 公共超参数 —— 
+DEVICE="cuda:0"            # GPU 设备
+BATCH_SIZE=64              # 批大小
+LR=1e-3                    # 学习率
+MAX_SEQ_LEN=96             # 最大序列长度
+MAX_EPOCH=100              # 最大训练轮数
+EVAL_EPOCHS=1              # 每多少轮评估一次
+EARLY_STOP=20              # 验证不升的早停轮数
+POOL_TYPE="none"           # pooling 策略
+N_CLASS=2                  # 分类数
+LOG="no"                   # 是否记录训练日志 (yes/no)
 
-# 多轮训练设置
-REPEAT=5
-# 随机种子列表（长度 ≥ REPEAT，若少则循环使用最后一个）
-SEEDS=(42 43 44 45 46)
-# 默认训练模式：train 或 test
+# —— 多轮训练 & 随机种子 —— 
+REPEAT=5                   # 每个模型重复训练次数
+SEEDS=(42 43 44 45 46)     # 随机种子列表，长度 ≥ REPEAT，短则循环使用最后一个
+
+# —— 训练模式 —— 
+# 模式(train/test)，train 会训练并在 eval 上评估，test 只用已保存模型做一次测试
 MODE="train"
-# ———————————————————————————————————————————————————————————
