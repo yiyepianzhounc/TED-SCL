@@ -26,6 +26,7 @@ import re
 import torch.nn.functional as F
 
 """
+请增加描述
 nohup python word_embedding_Classifier_model_compare.py --encoding_model_name roberta-base > logs/roberta-base_model_compare_20240718.log 2>&1 &
 
 nohup python word_embedding_Classifier_model_compare.py --encoding_model_name roberta-large > logs/roberta-large_model_compare_20240718.log 2>&1 &
