@@ -12,7 +12,7 @@ MODELS=(
   "roberta-large"
   "sbert"
   "consert-base"
-  "consert-large"
+  "consert-large" # 增加注释
 )
 
 # —— 公共超参数 —— 
